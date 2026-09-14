@@ -1,17 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 
-/**
- * Reveal
- * Generic "fade up from bottom" scroll-reveal wrapper.
- * Wrap any block of content in this to have it fade + rise into
- * view the first time it enters the viewport. Used across every
- * section (sketch quote, awards, shop, newsletter, footer) so the
- * whole page has one consistent reveal animation.
- *
- * Accepts a forwarded ref (merged with its own internal
- * IntersectionObserver ref) so it can wrap elements that also need
- * an external ref — e.g. the footer's mouse-tracked reveal strip.
- */
 const Reveal = forwardRef(function Reveal(
   {
     as: Tag = "div",
