@@ -279,7 +279,7 @@ function ProductCard({ product }) {
           {product.tags.map((tag, i) => (
             <span
               key={`${product.id}-${tag}`}
-              className={`rounded-[3px] px-6 py-3 text-[14px] mb-20 md:mb-8 lg:mb-30 uppercase font-display ${i === 0 ? "bg-brand-yellow text-black" : "bg-gray-100 text-black/70"}`}
+              className={`rounded-[3px] px-6 py-3 text-[14px] mb-20 md:mb-10 lg:mb-20 uppercase font-display ${i === 0 ? "bg-brand-yellow text-black" : "bg-gray-100 text-black/70"}`}
             >
               {tag}
             </span>
