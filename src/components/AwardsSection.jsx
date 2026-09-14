@@ -101,7 +101,7 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
+      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
     >
       <span className="relative flex h-5 w-5 items-center justify-center overflow-visible">
         <svg

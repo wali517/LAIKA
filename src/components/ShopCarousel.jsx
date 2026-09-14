@@ -141,7 +141,7 @@ function ShopNowButton() {
       rel="noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group relative inline-flex items-center gap-13 overflow-hidden rounded-[6px] bg-black px-6 py-6.5 text-[14px] font-bold uppercase tracking-widest text-white"
+      className="cursor-pointer group relative inline-flex items-center gap-13 overflow-hidden rounded-[6px] bg-black px-6 py-6.5 text-[14px] font-bold uppercase tracking-widest text-white"
     >
       <DashBorder
         size={size}
@@ -167,7 +167,7 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
+      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
     >
       <span className="relative flex h-5 w-5 items-center justify-center overflow-visible">
         <svg

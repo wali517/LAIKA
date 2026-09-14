@@ -212,13 +212,13 @@ export default function SketchSection() {
       className="relative overflow-hidden bg-brand-cream px-4 py-20 md:px-8 md:py-28 lg:px-10 lg:py-32"
     >
       <div className="relative mx-auto hidden w-full max-w-[1184px] justify-between gap-10 lg:flex">
-        <Reveal className="w-[39%] -translate-x-[10%]" delay={0}>
+        <Reveal className="cursor-pointer w-[39%] -translate-x-[10%]" delay={0}>
           <FloatingImage
             image={images.topLeft}
             sizeClassName={`${DEFAULT_SIZE} bg-brand-cream`}
           />
         </Reveal>
-        <Reveal className="mt-8 w-[39%] translate-x-[10%]" delay={100}>
+        <Reveal className="cursor-pointer mt-8 w-[39%] translate-x-[10%]" delay={100}>
           <FloatingImage
             image={images.topRight}
             sizeClassName={`${DEFAULT_SIZE} bg-brand-cream`}
@@ -256,13 +256,13 @@ export default function SketchSection() {
         </Reveal>
       </div>
       <div className="relative mx-auto hidden w-full max-w-[1184px] justify-between gap-10 lg:flex">
-        <Reveal className="mt-6 w-[39%] -translate-x-[10%]" delay={200}>
+        <Reveal className="cursor-pointer mt-6 w-[39%] -translate-x-[10%]" delay={200}>
           <FloatingImage
             image={images.bottomLeft}
             sizeClassName={DEFAULT_SIZE}
           />
         </Reveal>
-        <Reveal className="mt-14 w-[39%] translate-x-[10%]" delay={250}>
+        <Reveal className="cursor-pointer mt-14 w-[39%] translate-x-[10%]" delay={250}>
           <FloatingImage
             image={images.bottomRight}
             sizeClassName={DEFAULT_SIZE}
