@@ -18,10 +18,8 @@
 }
 
 @theme {
-  --font-display: "PPNeueMontreal", sans-serif;
-  --font-sans: "PPNeueMontreal", sans-serif;
+  --font-display: "PPNeueMontreal-Regular", sans-serif;
   --font-grotesk: "PPRightGrotesk", sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
 
   --color-brand-yellow: #f3cf72;
   --color-brand-dark: #111111;
@@ -44,29 +42,15 @@ html {
 
 body {
   margin: 0;
-  font-family: "PPNeueMontreal", sans-serif;
-  font-weight: 500;
+  font-family: "PPNeueMontreal-Regular", sans-serif;
+  font-weight: 400;
   background-color: #ffffff;
   color: #111111;
-}
-
-.font-display {
-  font-family: "PPNeueMontreal", sans-serif;
-  font-weight: 500;
-}
-
-.font-sans {
-  font-family: "PPNeueMontreal", sans-serif;
-  font-weight: 500;
 }
 
 .font-right-grotesk {
   font-family: "PPRightGrotesk", sans-serif;
   font-weight: 900;
-}
-
-.font-serif {
-  font-family: var(--font-serif);
 }
 
 .heading-right-grotesk {

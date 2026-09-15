@@ -81,7 +81,7 @@ const films = [
     image:
       "https://www.datocms-assets.com/153672/1750184410-laika_home_c-04-slider_6_cor_desktop.jpg",
     mobile:
-      "https://www.datocms-assets.com/153672/1750184410-laika_home_c-04-slider_6_cor_mobile.jpg",
+      "https://www.datocms-assets.com/153672/1750184410-laika_home_c-04-slider_6_cor_desktop.jpg",
     thumb:
       "https://www.datocms-assets.com/153672/1750184410-laika_home_c-04-slider_6_cor_thumbnail.jpg",
     logo: "https://www.datocms-assets.com/153672/1751400881-trim-cor-logo-nocat-white.svg",

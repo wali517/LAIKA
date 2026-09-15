@@ -16,10 +16,10 @@ export default function Hero() {
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute inset-0 bg-[#666]/5" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/5" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-l from-black/30 via-[#555]/8 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 z-50 mx-auto w-full max-w-[1440px] px-5 sm:px-7 md:px-10 lg:px-12 pb-[10vh]">
+          <div className="absolute inset-0 bg-linear-to-r from-black/65 via-black/35 to-black/5" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/15 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-l from-black/30 via-[#555]/8 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 z-50 mx-auto w-full max-w-360 px-5 sm:px-7 md:px-10 lg:px-12 pb-[10vh]">
             <div className="grid grid-cols-1 gap-[5vw] lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.9fr)]">
               <div className="flex flex-col items-start">
                 <div className="wildwood-eyebrow">
@@ -29,14 +29,14 @@ export default function Hero() {
                     </p>
                   </div>
                 </div>
-                <div className="wildwood-title-wrap mt-[20px]">
+                <div className="wildwood-title-wrap mt-5">
                   <div className="wildwood-title-mask">
                     <h1 className="wildwood-title wildwood-title-reveal font-grotesk font-extrabold tracking-[-0.02em] uppercase lg:text-[64px] text-[56px] md:text-[56px] text-white">
                       Wildwood
                     </h1>
                   </div>
                 </div>
-                <div className="wildwood-mobile-description-wrap mt-4 max-w-[470px] lg:hidden">
+                <div className="wildwood-mobile-description-wrap mt-4 max-w-117.5 lg:hidden">
                   <div className="wildwood-text-mask">
                     <div className="wildwood-mobile-description wildwood-reveal-up wildwood-reveal-description">
                       <p className="font-display text-[20px] leading-[1.4] text-white/90 md:text-[18px]">
@@ -112,7 +112,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="hidden items-end justify-end lg:flex">
-                <div className="wildwood-description-wrap max-w-[330px] mb-32 mr-36 lg:text-white">
+                <div className="wildwood-description-wrap max-w-82.5 mb-32 mr-36 lg:text-white">
                   <div className="wildwood-description">
                     <div className="wildwood-description-line-mask">
                       <span className="wildwood-description-line wildwood-description-line-1">

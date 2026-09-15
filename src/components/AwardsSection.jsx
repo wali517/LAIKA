@@ -101,13 +101,13 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
+      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-sm border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
     >
       <span className="relative flex h-5 w-5 items-center justify-center overflow-visible">
         <svg
           viewBox="0 0 24 24"
           fill="none"
-          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "group-hover:-translate-x-[40px]" : "group-hover:translate-x-[40px]"}`}
+          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "group-hover:-translate-x-10" : "group-hover:translate-x-10"}`}
           aria-hidden="true"
         >
           <ChevronPath direction={direction} />
@@ -115,7 +115,7 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
         <svg
           viewBox="0 0 24 24"
           fill="none"
-          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "translate-x-[40px] group-hover:translate-x-0" : "-translate-x-[40px] group-hover:translate-x-0"}`}
+          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "translate-x-10 group-hover:translate-x-0" : "-translate-x-10 group-hover:translate-x-0"}`}
           aria-hidden="true"
         >
           <ChevronPath direction={direction} />
@@ -166,7 +166,7 @@ export default function AwardsSection() {
       id="awards"
       className="w-full overflow-hidden bg-brand-cream border-black/10 py-12"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="mx-auto w-full max-w-360">
         <Reveal as="div" className="w-full overflow-hidden">
           <div
             className="flex w-full select-none touch-pan-y"
@@ -178,9 +178,9 @@ export default function AwardsSection() {
             {awards.map((award, index) => (
               <div
                 key={`${award.name}-${index}`}
-                className="relative min-w-[100%] shrink-0 sm:min-w-[50%] lg:min-w-[25%]"
+                className="relative min-w-full shrink-0 sm:min-w-[50%] lg:min-w-[25%]"
               >
-                <div className="relative flex h-[220px] flex-col justify-between border-y border-l border-r border-black/10 border-y-side-dashed px-4 py-8 md:h-[260px]">
+                <div className="relative flex h-55 flex-col justify-between border-y border-l border-r border-black/10 border-y-side-dashed px-4 py-8 md:h-65">
                   <p className="relative z-10 m-0 max-w-full text-[22px] leading-[1.05] text-black md:text-[18px] font-display">
                     {award.name}
                   </p>
@@ -194,7 +194,7 @@ export default function AwardsSection() {
                       </p>
                     ))}
                   </div>
-                  <div className="pointer-events-none absolute bottom-5 right-5 flex h-[90px] w-[90px] items-center justify-center md:bottom-4 md:right-4 md:h-[90px] md:w-[90px]">
+                  <div className="pointer-events-none absolute bottom-5 right-5 flex h-22.5 w-22.5 items-center justify-center md:bottom-4 md:right-4 md:h-22.5 md:w-22.5">
                     {awardImages[award.name] ? (
                       <img
                         src={awardImages[award.name]}

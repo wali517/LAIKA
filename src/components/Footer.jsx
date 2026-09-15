@@ -178,11 +178,11 @@ export default function Footer() {
     <div className="relative w-full top-34">
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-[-70px] h-[120px] w-full max-w-[1440px] -translate-x-1/2 bg-[#111111]"
+        className="absolute left-1/2 -top-17.5 h-30 w-full max-w-360 -translate-x-1/2 bg-brand-dark"
         style={{ clipPath: "polygon(0 0, 100% 60px, 100% 120px, 0 120px)" }}
       />
-      <footer className="relative w-full bg-[#111111] text-white selection:bg-[#F5C710] selection:text-black">
-        <div className="relative mx-auto w-full max-w-[1440px] px-6 pb-0 pt-[90px] md:pt-[80px] md:px-4 lg:pt-[130px] lg:px-12">
+      <footer className="relative w-full bg-brand-dark text-white selection:bg-[#F5C710] selection:text-black">
+        <div className="relative mx-auto w-full max-w-360 px-6 pb-0 pt-22.5 md:pt-20 md:px-4 lg:pt-32.5 lg:px-12">
           <Reveal
             as="div"
             className="flex flex-col items-start gap-4 lg:flex-row lg:items-start lg:justify-between lg:pb-10"
@@ -203,13 +203,13 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Find us on ${label}`}
-                    className="group relative flex items-center font-black font-grotesk uppercase tracking-wide text-2xl sm:text-[36px] transition-colors duration-300 hover:text-[#F5C710]"
+                    className="group relative flex items-center font-semibold font-grotesk uppercase tracking-wide text-2xl sm:text-[36px] transition-colors duration-300 hover:text-[#F5C710]"
                   >
                     <span className="mr-10 shrink-0 text-[16px] font-normal text-white">
                       {number}
                     </span>
                     <span
-                      className="pointer-events-none absolute left-[60px] top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 scale-75 items-center justify-center text-[#F5C710] opacity-0 transition-all duration-300 ease-out lg:group-hover:scale-100 lg:group-hover:opacity-100"
+                      className="pointer-events-none absolute left-15 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 scale-75 items-center justify-center text-[#F5C710] opacity-0 transition-all duration-300 ease-out lg:group-hover:scale-100 lg:group-hover:opacity-100"
                       aria-hidden="true"
                     >
                       <span className="relative flex h-11 w-11 items-center justify-center">
@@ -231,7 +231,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Find us on ${label}`}
-                    className="group flex items-center justify-between py-3 pt-0 font-black uppercase tracking-wide text-2xl text-white transition-colors duration-200"
+                    className="group flex items-center justify-between py-3 pt-0 font-semibold uppercase tracking-wide text-2xl text-white transition-colors duration-200"
                   >
                     <div className="flex min-w-0 items-center">
                       <span className="mr-6 shrink-0 text-[16px] font-normal text-white">
@@ -260,7 +260,7 @@ export default function Footer() {
                 <img
                   src="https://www.datocms-assets.com/153672/1787248887-en-b-corp.png?auto=format&fit=max&h=200&q=90"
                   alt="Certified B Corporation"
-                  className="h-[90px] w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
+                  className="h-22.5 w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
                 />
               </div>
               <nav aria-label="Legal footer menu" className="w-full lg:w-auto">
@@ -271,14 +271,14 @@ export default function Footer() {
                         {isButton ? (
                           <button
                             type="button"
-                            className="relative w-fit text-left transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
+                            className="relative w-fit text-left transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
                           >
                             {label}
                           </button>
                         ) : (
                           <a
                             href={href}
-                            className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
+                            className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
                           >
                             {label}
                           </a>
@@ -292,7 +292,7 @@ export default function Footer() {
                         <a
                           href={href}
                           className="relative inline-block w-fit transition-colors
-                            duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
+                            duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
                         >
                           {label}
                         </a>
@@ -306,7 +306,7 @@ export default function Footer() {
                           href={href}
                           target={external ? "_blank" : undefined}
                           rel={external ? "noreferrer" : undefined}
-                          className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
+                          className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
                         >
                           {label}
                         </a>
@@ -318,7 +318,7 @@ export default function Footer() {
                       <div key={label}>
                         <a
                           href={href}
-                          className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
+                          className="relative inline-block w-fit transition-colors duration-200 hover:text-[#F5C710] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#F5C710] after:transition-all after:duration-300 hover:after:w-full"
                         >
                           {label}
                         </a>
@@ -336,7 +336,7 @@ export default function Footer() {
             onMouseMove={handleCarpetMove}
             onMouseEnter={() => setRevealing(true)}
             onMouseLeave={() => setRevealing(false)}
-            className="relative mt-10 min-h-[170px] w-full overflow-hidden border-t border-dashed border-white/20 pt-6 text-xs text-white/60 sm:mt-12 sm:min-h-[170px] sm:pt-6 md:mt-14"
+            className="relative mt-10 min-h-42.5 w-full overflow-hidden border-t border-dashed border-white/20 pt-6 text-xs text-white/60 sm:mt-12 sm:min-h-42.5 sm:pt-6 md:mt-14"
           >
             <img
               src="https://www.laika.com/assets/images/portland_pattern.svg"
@@ -349,7 +349,7 @@ export default function Footer() {
                 "--reveal-size": revealing ? "120px" : "0px",
               }}
             />
-            <span className="relative z-10 block font-black font-grotesk uppercase font-semibold tracking-wide text-white/60 text-[18px] sm:text-center lg:absolute lg:left-0 lg:top-6 lg:mt-0 lg:text-left">
+            <span className="relative z-10 block font-semibold font-grotesk uppercase tracking-wide text-white/60 text-[18px] sm:text-center lg:absolute lg:left-0 lg:top-6 lg:mt-0 lg:text-left">
               Made in Portland
             </span>
             <span className="relative  mt-3 block text-[10px] tracking-wider text-white/50 text-left md:text-center lg:absolute lg:right-0 lg:top-6 lg:mt-0 lg:text-right">

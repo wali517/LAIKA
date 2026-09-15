@@ -66,11 +66,11 @@ function FloatingImage({ image, sizeClassName }) {
         />
       </picture>
       <div
-        className="absolute inset-0 z-[4] pointer-events-none mix-blend-multiply"
+        className="absolute inset-0 z-4 pointer-events-none mix-blend-multiply"
         style={{ backgroundColor: "#f4f3f0" }}
       />
       <picture
-        className="absolute inset-0 block h-full w-full transition-[clip-path] duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className="absolute inset-0 block h-full w-full transition-[clip-path] duration-650 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{
           clipPath: hovered ? revealedClip : hiddenClip,
           WebkitClipPath: hovered ? revealedClip : hiddenClip,
@@ -175,7 +175,7 @@ function DashedButton() {
       aria-label="Learn more about us"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative mt-10 inline-flex items-center gap-4 overflow-hidden rounded-[6px] bg-black px-7 py-4 text-[14px] font-medium uppercase tracking-[0.03em] text-white"
+      className="relative mt-10 inline-flex items-center gap-4 overflow-hidden rounded-md bg-black px-7 py-4 text-[14px] font-medium uppercase tracking-[0.03em] text-white"
     >
       <DashBorder size={size} hovered={hovered} rx={6} />
       <span className="relative z-10">Learn More</span>
@@ -211,8 +211,8 @@ export default function SketchSection() {
       id="Floatingtext"
       className="relative overflow-hidden bg-brand-cream px-4 py-20 md:px-8 md:py-28 lg:px-10 lg:py-32"
     >
-      <div className="relative mx-auto hidden w-full max-w-[1184px] justify-between gap-10 lg:flex">
-        <Reveal className="cursor-pointer w-[39%] -translate-x-[10%]" delay={0}>
+      <div className="relative mx-auto hidden w-full max-w-296 justify-between gap-10 lg:flex">
+        <Reveal className="cursor-pointer w-[39%] translate-x-[-10%]" delay={0}>
           <FloatingImage
             image={images.topLeft}
             sizeClassName={`${DEFAULT_SIZE} bg-brand-cream`}
@@ -227,10 +227,10 @@ export default function SketchSection() {
       </div>
       <Reveal
         as="div"
-        className="relative z-20 mx-auto flex max-w-[900px] flex-col items-center px-3 py-12 text-center md:py-16 lg:py-20"
+        className="relative z-20 mx-auto flex max-w-225 flex-col items-center px-3 py-12 text-center md:py-16 lg:py-20"
         delay={150}
       >
-        <blockquote className="max-w-[850px]">
+        <blockquote className="max-w-212.5">
           <p className="font-grotesk text-[44px] font-bold leading-[1.08] tracking-[-0.02em] md:text-[32px] lg:text-[54px]">
             "LAIKA’s films aim to promote thought, feeling, and connectivity
             through art, inspired by our shared humanity."
@@ -241,7 +241,7 @@ export default function SketchSection() {
         </blockquote>
         <DashedButton />
       </Reveal>
-      <div className="relative mx-auto flex w-full max-w-[560px] flex-col lg:hidden">
+      <div className="relative mx-auto flex w-full max-w-140 flex-col lg:hidden">
         <Reveal className="self-start" delay={200}>
           <FloatingImage
             image={images.topLeft}
@@ -251,12 +251,12 @@ export default function SketchSection() {
         <Reveal className="mt-6 self-end" delay={250}>
           <FloatingImage
             image={images.bottomRight}
-            sizeClassName="h-[160px] w-[260px] md:h-[210px] md:w-[350px]"
+            sizeClassName="h-[160px] w-65 md:h-[210px] md:w-[350px]"
           />
         </Reveal>
       </div>
-      <div className="relative mx-auto hidden w-full max-w-[1184px] justify-between gap-10 lg:flex">
-        <Reveal className="cursor-pointer mt-6 w-[39%] -translate-x-[10%]" delay={200}>
+      <div className="relative mx-auto hidden w-full max-w-296 justify-between gap-10 lg:flex">
+        <Reveal className="cursor-pointer mt-6 w-[39%] translate-x-[-10%]" delay={200}>
           <FloatingImage
             image={images.bottomLeft}
             sizeClassName={DEFAULT_SIZE}

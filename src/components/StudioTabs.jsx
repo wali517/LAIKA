@@ -61,9 +61,9 @@ function ArrowGlyph({ className }) {
 
 function ArrowBadge() {
   return (
-    <span className="relative flex h-[44px] w-[44px] shrink-0 items-center justify-center overflow-hidden rounded-[4px] bg-[#111] text-white md:h-[48px] md:w-[48px] lg:h-[52px] lg:w-[52px]">
+    <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-sm bg-[#111] text-white md:h-12 md:w-12 lg:h-13 lg:w-13">
       <svg
-        className="pointer-events-none absolute inset-[2px] h-[calc(100%-4px)] w-[calc(100%-4px)]"
+        className="pointer-events-none absolute inset-0.5 h-[calc(100%-4px)] w-[calc(100%-4px)]"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -81,7 +81,7 @@ function ArrowBadge() {
           className=" transition-all duration-500 group-hover/card:[stroke-dasharray:500_0]"
         />
       </svg>
-      <span className="relative h-[20px] w-[20px] overflow-hidden md:h-[24px] md:w-[24px] lg:h-[26px] lg:w-[26px]">
+      <span className="relative h-5 w-5 overflow-hidden md:h-6 md:w-6 lg:h-6.5 lg:w-6.5">
         <ArrowGlyph className="absolute inset-0 h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover/text:translate-x-full" />
         <ArrowGlyph className="absolute inset-0 h-full w-full -translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover/text:translate-x-0" />
       </span>
@@ -93,20 +93,20 @@ export default function StudioTabs() {
   const [activeId, setActiveId] = useState(studioTabs[0].id);
   return (
     <section className="relative w-full overflow-hidden bg-[#eeeae4] text-[#111]">
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-[16px] pb-[30px] pt-[50px] md:px-[40px] md:pb-[40px] md:pt-[60px] lg:min-h-[1230px] lg:px-[60px] lg:pb-0 ">
+      <div className="relative z-10 mx-auto w-full max-w-360 px-4 pb-7.5 pt-12.5 md:px-10 md:pb-10 md:pt-15 lg:min-h-307.5 lg:px-15 lg:pb-0 ">
         <p
-          className={`absolute right-[16px] top-[46px] m-0 text-[14px] p-[0_0_48px] uppercase leading-none tracking-[-0.035em] md:right-[40px] md:p-[0_0_48px] md:top-[34px] md:text-[12px] lg:right-[60px] lg:top-[150px] lg:text-[14px] animate-[studioLine_0.6s_cubic-bezier(0.19,1,0.22,1)_0s_both]`}
+          className={`absolute right-4 top-11.5 m-0 text-[14px] p-[0_0_48px] uppercase leading-none tracking-[-0.035em] md:right-10 md:p-[0_0_48px] md:top-8.5 md:text-[12px] lg:right-15 lg:top-37.5 lg:text-[14px] animate-[studioLine_0.6s_cubic-bezier(0.19,1,0.22,1)_0s_both]`}
         >
           / Explore Our Studios
         </p>
-        <ul className="relative z-20 m-0 flex list-none flex-col p-0 lg:absolute lg:left-[80px] lg:top-[122px] md:mt-[30px] md:ml-[-20px] mt-[60px] ">
+        <ul className="relative z-20 m-0 flex list-none flex-col p-0 lg:absolute lg:left-20 lg:top-30.5 md:mt-7.5 md:-ml-5 mt-15 ">
           {studioTabs.map((tab, index) => {
             const isActive = tab.id === activeId;
             return (
               <li
                 key={tab.id}
                 className={
-                  index < 2 ? "mb-[20px] md:mb-[20px] lg:mb-[29px]" : ""
+                  index < 2 ? "mb-5 md:mb-5 lg:mb-7.25" : ""
                 }
               >
                 <button
@@ -116,7 +116,7 @@ export default function StudioTabs() {
                   className={`group relative inline-flex w-max border-0 bg-transparent p-0 text-left font-grotesk outline-none animate-[studioButton_0.65s_cubic-bezier(0.19,1,0.22,1)_0.58s_both]`}
                 >
                   <span className="relative inline-block">
-                    <span className="relative z-10 block whitespace-nowrap pb-[8px] text-[32px] font-extrabold leading-none tracking-[-0.02em] md:text-[30px] lg:pb-[10px] lg:text-[42px]">
+                    <span className="relative z-10 block whitespace-nowrap pb-2 text-[32px] font-extrabold leading-none tracking-[-0.02em] md:text-[30px] lg:pb-2.5 lg:text-[42px]">
                       {tab.title}
                     </span>
                     <span
@@ -130,7 +130,7 @@ export default function StudioTabs() {
                     />
                     <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-[#111] opacity-0 transition-all duration-300 group-hover:scale-x-100 group-hover:opacity-100" />
                   </span>
-                  <span className="absolute -right-[24px] top-[-1px] text-[12px] font-medium leading-none tracking-[-0.02em] opacity-0 -translate-x-[5px] transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-data-[active=true]:translate-x-0 group-data-[active=true]:opacity-100 md:text-[13px] md:-right-8 lg:-right-[26px] lg:top-[-2px] lg:text-[14px]">
+                  <span className="absolute -right-6 -top-px text-[12px] font-medium leading-none tracking-[-0.02em] opacity-0 -translate-x-1.25 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-data-[active=true]:translate-x-0 group-data-[active=true]:opacity-100 md:text-[13px] md:-right-8 lg:-right-6.5 lg:-top-0.5 lg:text-[14px]">
                     /{tab.number}
                   </span>
                 </button>
@@ -138,21 +138,21 @@ export default function StudioTabs() {
             );
           })}
         </ul>
-        <div className="relative mt-[60px] w-full max-w-full md:mt-[70px] md:w-auto md:max-w-none md:ml-[-20px] md:mr-[-20px] lg:absolute lg:left-1/2 lg:top-[150px] lg:mx-0 lg:mt-0 lg:h-[650px] lg:w-[508px] lg:max-w-none lg:-translate-x-1/2">
+        <div className="relative mt-15 w-full max-w-full md:mt-17.5 md:w-auto md:max-w-none md:-ml-5 md:mr-5 lg:absolute lg:left-1/2 lg:top-37.5 lg:mx-0 lg:mt-0 lg:h-162.5 lg:w-127 lg:max-w-none lg:-translate-x-1/2">
           {studioTabs.map((tab) => {
             const isActive = tab.id === activeId;
             return (
               <article
                 key={tab.id}
                 aria-hidden={!isActive}
-               className={
-  isActive
-    ? "static opacity-100 pointer-events-auto z-10 lg:absolute lg:inset-0"
-    : "hidden opacity-0 pointer-events-none z-0 lg:block lg:absolute lg:inset-0"
-}
+                className={
+                  isActive
+                    ? "static opacity-100 pointer-events-auto z-10 lg:absolute lg:inset-0"
+                    : "hidden opacity-0 pointer-events-none z-0 lg:block lg:absolute lg:inset-0"
+                }
               >
-                <a className="group/card relative z-10 flex h-auto w-full flex-col overflow-visible rounded-[8px] bg-[#111] md:rounded-[9px] lg:h-full lg:rounded-[10px] lg:overflow-hidden">
-                  <picture className="h-full w-full md:h-[400px] md:w-full lg:h-full lg:aspect-auto">
+                <a className="group/card relative z-10 flex h-auto w-full flex-col overflow-visible rounded-lg bg-[#111] md:rounded-[9px] lg:h-full lg:rounded-[10px] lg:overflow-hidden">
+                  <picture className="h-full w-full md:h-100 md:w-full lg:h-full lg:aspect-auto">
                     <source
                       srcSet={tab.imageMobile}
                       media="(max-width: 1023px)"
@@ -165,22 +165,21 @@ export default function StudioTabs() {
                       src={tab.imageDesktop}
                       alt=""
                       loading={isActive ? "eager" : "lazy"}
-                      className="block h-full w-full object-cover object-center rounded-[8px]"
+                      className="block h-full w-full object-cover object-center rounded-lg"
                     />
-                    
                   </picture>
                   <div
                     className={
-                      "group/text absolute bottom-[12px] left-[12px] right-[12px] z-20 rounded-[8px] bg-white p-[12px] pb-[24px] md:bottom-[16px] md:left-[16px] md:right-[16px] md:p-[20px] md:pb-[24px] lg:bottom-[12px] lg:left-[11px] lg:right-[11px] lg:p-[14px] lg:pb-[16px] lg:min-h-[190px] lg:rounded-[10px]"
+                      "group/text absolute bottom-3 left-3 right-3 z-20 rounded-lg bg-white p-3 pb-6 md:bottom-4 md:left-4 md:right-4 md:p-5 md:pb-6 lg:bottom-3 lg:left-2.75 lg:right-2.75 lg:p-3.5 lg:pb-4 lg:min-h-47.5 lg:rounded-[10px]"
                     }
                   >
                     <h3 className="m-0 text-[20px] font-normal leading-[1.05] tracking-[-0.045em] md:text-[24px] lg:text-[24px]">
                       {tab.title}
                     </h3>
-                    <div className="relative mt-[15px] pr-[58px] md:mt-[16px] md:pr-[68px] lg:mt-[20px] lg:pr-[70px]">
+                    <div className="relative mt-3.75 pr-14.5 md:mt-4 md:pr-17 lg:mt-5 lg:pr-17.5">
                       <p
                         className={
-                          "m-0 max-w-[220px] text-[14px] font-normal leading-[1.4] tracking-[-0.025em] md:max-w-none md:text-[14px] md:leading-[1.35] lg:max-w-[360px] lg:text-[18px]"
+                          "m-0 max-w-55 text-[14px] font-normal leading-[1.4] tracking-tight md:max-w-none md:text-[14px] md:leading-[1.35] lg:max-w-90 lg:text-[18px]"
                         }
                       >
                         {tab.description}
@@ -196,7 +195,7 @@ export default function StudioTabs() {
           })}
         </div>
       </div>
-      <div className="relative z-0 mt-[-150px] h-[320px] w-full overflow-hidden md:mt-[-130px] md:h-[380px] lg:absolute lg:inset-x-0 lg:top-[610px] lg:mt-0 lg:h-[620px]">
+      <div className="relative z-0 -mt-37.5 h-80 w-full overflow-hidden md:-mt-32.5 md:h-95 lg:absolute lg:inset-x-0 lg:top-152.5 lg:mt-0 lg:h-155">
         <picture className="block h-full w-full">
           <source srcSet={BACKGROUND_MOBILE} media="(max-width: 1023px)" />
           <source srcSet={BACKGROUND_DESKTOP} media="(min-width: 1024px)" />

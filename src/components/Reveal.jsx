@@ -44,7 +44,7 @@ const Reveal = forwardRef(function Reveal(
   return (
     <Tag
       ref={setRefs}
-      className={`transition-all ease-[cubic-bezier(0.22,1,0.36,1)] duration-[800ms] will-change-transform ${
+      className={`transition-all ease-[cubic-bezier(0.22,1,0.36,1)] duration-800 will-change-transform ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}

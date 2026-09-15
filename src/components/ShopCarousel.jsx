@@ -141,7 +141,7 @@ function ShopNowButton() {
       rel="noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="cursor-pointer group relative inline-flex items-center gap-13 overflow-hidden rounded-[6px] bg-black px-6 py-6.5 text-[14px] font-bold uppercase tracking-widest text-white"
+      className="cursor-pointer group relative inline-flex items-center gap-13 overflow-hidden rounded-md bg-black px-6 py-6.5 text-[14px] font-bold uppercase tracking-widest text-white"
     >
       <DashBorder
         size={size}
@@ -167,13 +167,13 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[4px] border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
+      className="cursor-pointer group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-sm border border-black bg-transparent text-black disabled:pointer-events-none disabled:opacity-30 md:h-14 md:w-14"
     >
       <span className="relative flex h-5 w-5 items-center justify-center overflow-visible">
         <svg
           viewBox="0 0 24 24"
           fill="none"
-          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "group-hover:-translate-x-[40px]" : "group-hover:translate-x-[40px]"}`}
+          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "group-hover:-translate-x-10" : "group-hover:translate-x-10"}`}
           aria-hidden="true"
         >
           <ChevronPath direction={direction} />
@@ -181,7 +181,7 @@ function NavButton({ direction = "next", onClick, disabled, label }) {
         <svg
           viewBox="0 0 24 24"
           fill="none"
-          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "translate-x-[40px] group-hover:translate-x-0" : "-translate-x-[40px] group-hover:translate-x-0"}`}
+          className={`absolute h-5 w-5 transition-transform duration-700 ease-out ${isPrev ? "translate-x-10 group-hover:translate-x-0" : "-translate-x-10 group-hover:translate-x-0"}`}
           aria-hidden="true"
         >
           <ChevronPath direction={direction} />
@@ -260,13 +260,13 @@ function ProductCard({ product }) {
     <article
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
-      className="flex min-w-0 flex-col overflow-hidden rounded-[12px] border border-black/10 bg-white p-2.5"
+      className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-black/10 bg-white p-2.5"
     >
       <div className="relative overflow-hidden rounded-[10px] bg-gray-50">
         <img
           src={product.image}
           alt={product.name}
-          className="h-[250px] w-full object-cover object-center"
+          className="h-62.5 w-full object-cover object-center"
         />
         {product.price && (
           <span className="absolute right-3 top-3 rounded-md bg-black/80 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
@@ -285,7 +285,7 @@ function ProductCard({ product }) {
             </span>
           ))}
         </div>
-        <h3 className="h-[58px] w-[260px] text-[18px] font-display font-medium leading-snug text-black mb-1 md:mb-4 lg:mb-3">
+        <h3 className="h-14.5 w-65 text-[18px] font-display font-medium leading-snug text-black mb-1 md:mb-4 lg:mb-3">
           {product.name}
         </h3>
         <a
@@ -305,7 +305,7 @@ function ProductCard({ product }) {
           </span>
           <span
             ref={btnRef}
-            className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[8px] bg-black text-white left-1"
+            className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-black text-white left-1"
           >
             <DashBorder
               size={btnSize}
@@ -381,7 +381,7 @@ export default function ShopCarousel() {
           </h2>
         </div>
         <div className="flex flex-col items-start gap-6 md:items-end">
-          <div className="lg:w-[340px] w-full md:text-centre">
+          <div className="lg:w-85 w-full md:text-centre">
             <p className="mb-4 text-black text-[14px] lg:text-[16px] font-display">
               Bring the world of LAIKA home. Explore our shop, filled with
               products inspired by your favorite films.

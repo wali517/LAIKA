@@ -30,7 +30,7 @@ const slugify = (value = "") =>
 function LaikaLogo() {
   return (
     <span
-      className="block h-[48px] w-[88px] select-none"
+      className="block h-12 w-22 select-none"
       data-icon="LaikaLogo"
       aria-hidden="true"
     >
@@ -121,16 +121,16 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
   return (
     <>
       <div
-        className={`hidden xl:block fixed inset-0 z-[80] bg-black/50 pointer-events-none transition-all duration-[350ms] ease-out ${filmsOpen ? "opacity-100 backdrop-blur-[8px]" : "opacity-0 backdrop-blur-0"}`}
+        className={`hidden xl:block fixed inset-0 z-80 bg-black/50 pointer-events-none transition-all duration-350 ease-out ${filmsOpen ? "opacity-100 backdrop-blur-sm" : "opacity-0 backdrop-blur-0"}`}
         aria-hidden="true"
       />
       <header
-        className={`hidden xl:block fixed top-0 left-0 right-0 z-[100] px-[20px] pt-[18px] transition-transform duration-[350ms] ease-out ${navbarVisible ? "translate-y-0" : "-translate-y-[180px]"}`}
+        className={`hidden xl:block fixed top-0 left-0 right-0 z-100 px-5 pt-4.5 transition-transform duration-350 ease-out ${navbarVisible ? "translate-y-0" : "-translate-y-45"}`}
       >
         <div
-          className={`relative mx-auto w-full max-w-[1440px] overflow-hidden rounded-[8px] transition-all duration-[350ms] ease-out ${scrolled || filmsOpen ? ` bg-white text-[#111111] shadow-[0_15px_45px_rgba(0,0,0,0.08)] ` : ` bg-transparent text-white `}`}
+          className={`relative mx-auto w-full max-w-360 overflow-hidden rounded-lg transition-all duration-350 ease-out ${scrolled || filmsOpen ? ` bg-white text-brand-dark shadow-[0_15px_45px_rgba(0,0,0,0.08)] ` : ` bg-transparent text-white `}`}
         >
-          <div className="flex h-[111px] items-center justify-between p-[32px]">
+          <div className="flex h-27.75 items-center justify-between p-8">
             <a
               href="/"
               aria-label="Laika Studios home"
@@ -140,7 +140,7 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
               <LaikaLogo />
             </a>
             <nav>
-              <ul className="flex items-center gap-[24px] text-[15px]">
+              <ul className="flex items-center gap-6 text-[15px]">
                 <li>
                   <div
                     className="relative flex items-center"
@@ -161,12 +161,12 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                         setButtonHovered(true);
                         openFilms();
                       }}
-                      className={`relative flex items-center gap-[4px] px-[13px] py-[9px] rounded-[6px] leading-none whitespace-nowrap transition-all duration-400 ${buttonHovered ? "bg-[#f3cf72] text-[#111111]" : ""}`}
+                      className={`relative flex items-center gap-1 px-3.25 py-2.25 rounded-md leading-none whitespace-nowrap transition-all duration-400 ${buttonHovered ? "bg-brand-yellow text-brand-dark" : ""}`}
                     >
                       <span>Animated Films</span>
                       <ChevronDown open={filmsOpen} />
                       <span
-                        className={`absolute top-[74px] left-[33px] right-[33px] h-px origin-center bg-current transition-transform duration-400 ${buttonHovered ? "scale-x-100" : "scale-x-0"}`}
+                        className={`absolute top-18.5 left-8.25 right-8.25 h-px origin-center bg-current transition-transform duration-400 ${buttonHovered ? "scale-x-100" : "scale-x-0"}`}
                       />
                     </button>
                   </div>
@@ -176,11 +176,11 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                     <a
                       href={link.href}
                       onMouseEnter={closeFilmsImmediately}
-                      className={`group relative block rounded-[6px] px-[13px] py-[9px] leading-none whitespace-nowrap transition-all duration-400 ${scrolled ? ` hover:bg-[#f3cf72] hover:text-[#111111] ` : ` hover:bg-white hover:text-[#111111] `}`}
+                      className={`group relative block rounded-md px-3.25 py-2.25 leading-none whitespace-nowrap transition-all duration-400 ${scrolled ? ` hover:bg-brand-yellow hover:text-brand-dark ` : ` hover:bg-white hover:text-brand-dark `}`}
                     >
                       {link.label}
                       <span
-                        className={`absolute top-[74px] left-[23px] right-[23px] h-px origin-center scale-x-0 transition-transform duration-400 group-hover:scale-x-100 ${scrolled ? "bg-[#111111]" : "bg-white"}`}
+                        className={`absolute top-18.5 left-5.75 right-5.75 h-px origin-center scale-x-0 transition-transform duration-400 group-hover:scale-x-100 ${scrolled ? "bg-brand-dark" : "bg-white"}`}
                       />
                     </a>
                   </li>
@@ -191,14 +191,14 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                     target="_blank"
                     rel="noreferrer"
                     onMouseEnter={closeFilmsImmediately}
-                    className={`group relative flex items-center gap-[3px] rounded-[6px] px-[13px] py-[9px] leading-none whitespace-nowrap transition-all duration-400 ${scrolled ? ` hover:bg-[#f3cf72] hover:text-[#111111] ` : ` hover:bg-white hover:text-[#111111] `}`}
+                    className={`group relative flex items-center gap-0.75 rounded-md px-3.25 py-2.25 leading-none whitespace-nowrap transition-all duration-400 ${scrolled ? ` hover:bg-brand-yellow hover:text-brand-dark ` : ` hover:bg-white hover:text-brand-dark `}`}
                   >
                     <span>Shop</span>
                     <span className="flex items-center">
                       <ExternalIcon />
                     </span>
                     <span
-                      className={`absolute top-[74px] left-[23px] right-[23px] h-px origin-center bg-current scale-x-0 transition-transform duration-400 group-hover:scale-x-100 ${scrolled ? "bg-[#111111]" : "bg-white"}`}
+                      className={`absolute top-18.5 left-5.75 right-5.75 h-px origin-center bg-current scale-x-0 transition-transform duration-400 group-hover:scale-x-100 ${scrolled ? "bg-brand-dark" : "bg-white"}`}
                     />
                   </a>
                 </li>
@@ -225,11 +225,11 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                 closeTimer.current = null;
               }, 120);
             }}
-            className={`overflow-hidden transition-[max-height,opacity] duration-[350ms] ease-out ${filmsOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}
+            className={`overflow-hidden transition-[max-height,opacity] duration-350 ease-out ${filmsOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0"}`}
           >
-            <div className="mx-[40px] border-t border-dashed border-[#111111]/40"/>
-            <div className="grid grid-cols-[300px_300px] gap-[50px] px-[40px] pt-[65px] pb-[70px]">
-              <div className="flex flex-col gap-[42px]">
+            <div className="mx-10 border-t border-dashed border-brand-dark/40"/>
+            <div className="grid grid-cols-[300px_300px] gap-12.5 px-10 pt-16.25 pb-17.5">
+              <div className="flex flex-col gap-10.5">
                 {filmOrder.slice(0, 3).map((title, index) => {
                   const film = getFilm(title);
                   if (!film) return null;
@@ -245,26 +245,26 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                       onMouseEnter={() => setHoveredFilm(title)}
                       onMouseLeave={() => setHoveredFilm(null)}
                       onFocus={() => setHoveredFilm(title)}
-                      className="group relative flex w-max items-baseline gap-[15px]"
+                      className="group relative flex w-max items-baseline gap-3.75"
                     >
                       <span
-                        className={`text-[15px] leading-none transition-colors duration-400 ${muted ? "text-[#999999]" : "text-[#111111]"}`}
+                        className={`text-[15px] leading-none transition-colors duration-400 ${muted ? "text-[#999999]" : "text-brand-dark"}`}
                       >
                         /{number}/
                       </span>
                       <span
-                        className={`relative font-display text-[20px] font-normal leading-[30px] transition-colors duration-400 ${muted ? "text-[#999999]" : "text-[#111111]"}`}
+                        className={`relative font-display text-[20px] font-normal leading-7.5 transition-colors duration-400 ${muted ? "text-[#999999]" : "text-brand-dark"}`}
                       >
                         {title}
                         <span
-                          className={`absolute -bottom-[3px] left-0 right-0 h-px origin-left bg-[#111111] transition-transform duration-400 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
+                          className={`absolute -bottom-0.75 left-0 right-0 h-px origin-left bg-brand-dark transition-transform duration-400 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
                         />
                       </span>
                     </a>
                   );
                 })}
               </div>
-              <div className="flex flex-col gap-[42px]">
+              <div className="flex flex-col gap-10.5">
                 {filmOrder.slice(3, 6).map((title, localIndex) => {
                   const film = getFilm(title);
                   if (!film) return null;
@@ -281,19 +281,19 @@ function DesktopNavbar({ scrolled, navbarVisible, filmsOpen, setFilmsOpen }) {
                       onMouseEnter={() => setHoveredFilm(title)}
                       onMouseLeave={() => setHoveredFilm(null)}
                       onFocus={() => setHoveredFilm(title)}
-                      className="group relative flex w-max items-baseline gap-[20px]"
+                      className="group relative flex w-max items-baseline gap-5"
                     >
                       <span
-                        className={`text-[15px] leading-none transition-colors duration-400 ${muted ? "text-[#999999]" : "text-[#111111]"}`}
+                        className={`text-[15px] leading-none transition-colors duration-400 ${muted ? "text-[#999999]" : "text-brand-dark"}`}
                       >
                         /{number}/
                       </span>
                       <span
-                        className={`relative font-display text-[20px] font-normal leading-[30px] transition-colors duration-400 ${muted ? "text-[#999999]" : "text-[#111111]"}`}
+                        className={`relative font-display text-[20px] font-normal leading-7.5 transition-colors duration-400 ${muted ? "text-[#999999]" : "text-brand-dark"}`}
                       >
                         {title}
                         <span
-                          className={`absolute -bottom-[3px] left-0 right-0 h-px origin-left bg-[#111111] transition-transform duration-400 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
+                          className={`absolute -bottom-0.75 left-0 right-0 h-px origin-left bg-brand-dark transition-transform duration-400 ${isHovered ? "scale-x-100" : "scale-x-0"}`}
                         />
                       </span>
                     </a>
@@ -336,10 +336,10 @@ function MobileTabletNavbar({
     <>
       {!mobileMenuOpen && (
         <header
-          className={`xl:hidden fixed bg-[#151515] left-0 right-0 top-0 z-[100] transition-transform duration-[350ms] ease-out ${navbarVisible ? "translate-y-0" : "-translate-y-[120px]"}`}
+          className={`xl:hidden fixed bg-[#151515] left-0 right-0 top-0 z-100 transition-transform duration-350 ease-out ${navbarVisible ? "translate-y-0" : "-translate-y-30"}`}
         >
           <nav
-            className={`flex h-[88px] items-center justify-between border-b border-dashed px-[17px] transition-colors duration-300 ${scrolled ? ` border-[#111111]/30 bg-white text-[#111111] ` : ` border-white/40 bg-transparent text-white `}`}
+            className={`flex h-22 items-center justify-between border-b border-dashed px-4.25 transition-colors duration-300 ${scrolled ? ` border-brand-dark/30 bg-white text-brand-dark ` : ` border-white/40 bg-transparent text-white `}`}
           >
             <a
               href="/"
@@ -352,7 +352,7 @@ function MobileTabletNavbar({
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="rounded-full px-[10px] py-[8px] text-[16px] leading-none transition-all duration-400"
+              className="rounded-full px-2.5 py-2 text-[16px] leading-none transition-all duration-400"
             >
               Menu
             </button>
@@ -360,9 +360,9 @@ function MobileTabletNavbar({
         </header>
       )}
       <div
-        className={`xl:hidden fixed inset-0 z-[200] overflow-y-auto overscroll-contain bg-[#151515] text-white transition-transform duration-[350ms] ease-[cubic-bezier(.22,1,.36,1)] ${mobileMenuOpen ? "translate-x-0" : "pointer-events-none translate-x-full"}`}
+        className={`xl:hidden fixed inset-0 z-200 overflow-y-auto overscroll-contain bg-[#151515] text-white transition-transform duration-350 ease-[cubic-bezier(.22,1,.36,1)] ${mobileMenuOpen ? "translate-x-0" : "pointer-events-none translate-x-full"}`}
       >
-        <div className="sticky top-0 z-10 flex h-[88px] items-center justify-between border-b border-dashed border-white/30 bg-[#151515] px-[17px]">
+        <div className="sticky top-0 z-10 flex h-22 items-center justify-between border-b border-dashed border-white/30 bg-[#151515] px-4.25">
           <a
             href="/"
             onClick={closeMenu}
@@ -375,7 +375,7 @@ function MobileTabletNavbar({
           <button
             type="button"
             onClick={closeMenu}
-            className="flex items-center gap-[9px] rounded-full px-[10px] py-[8px] text-[16px] leading-none transition-all duration-400"
+            className="flex items-center gap-2.25 rounded-full px-2.5 py-2 text-[16px] leading-none transition-all duration-400"
           >
             <span>Close</span>
             <span className="text-[20px] font-light leading-none"> ×</span>
@@ -387,7 +387,7 @@ function MobileTabletNavbar({
               type="button"
               onClick={() => setFilmsExpanded((value) => !value)}
               aria-expanded={filmsExpanded}
-              className={`flex min-h-[127px] w-full items-center justify-between px-[17px] text-left transition-colors duration-400 ${filmsExpanded ? "text-[#f3cf72]" : "text-white"}`}
+              className={`flex min-h-31.75 w-full items-center justify-between px-4.25 text-left transition-colors duration-400 ${filmsExpanded ? "text-brand-yellow" : "text-white"}`}
             >
               <span
                 className="font-grotesk text-[clamp(44px,3.2vw,40px)] font-bold leading-none
@@ -395,14 +395,14 @@ function MobileTabletNavbar({
               >
                 Animated Films
               </span>
-              <span className="mr-[15px] flex items-center">
+              <span className="mr-3.75 flex items-center">
                 <ChevronDown open={filmsExpanded} />
               </span>
             </button>
             <div
-              className={`overflow-hidden transition-[max-height,opacity] duration-[350ms] ease-out ${filmsExpanded ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`overflow-hidden transition-[max-height,opacity] duration-350 ease-out ${filmsExpanded ? "max-h-175 opacity-100" : "max-h-0 opacity-0"}`}
             >
-              <div className="flex flex-col gap-[20px] px-[17px] pb-[32px]">
+              <div className="flex flex-col gap-5 px-4.25 pb-8">
                 {filmOrder.map((title, index) => {
                   const film = getFilm(title);
                   if (!film) return null;
@@ -414,7 +414,7 @@ function MobileTabletNavbar({
                       key={title}
                       href={href}
                       onClick={closeMenu}
-                      className="flex font-display font-bold items-baseline gap-[50px] text-[14px] leading-[20px] transition-colors duration-20 hover:text-[#f3cf72]"
+                      className="flex font-display font-bold items-baseline gap-12.5 text-[14px] leading-5 transition-colors duration-20 hover:text-brand-yellow"
                     >
                       <span className="text-white/50">/{number}/</span>
                       <span>{title}</span>
@@ -429,7 +429,7 @@ function MobileTabletNavbar({
               key={link.label}
               href={link.href}
               onClick={closeMenu}
-              className="flex min-h-[127px] items-center border-b border-dashed border-white/25 px-[17px] font-grotesk font-bold text-[clamp(44px,3.2vw,39px)] leading-none tracking-[-0.045em] transition-colors duration-400 hover:text-[#f3cf72]"
+              className="flex min-h-31.75 items-center border-b border-dashed border-white/25 px-4.25 font-grotesk font-bold text-[clamp(44px,3.2vw,39px)] leading-none tracking-[-0.045em] transition-colors duration-400 hover:text-brand-yellow"
             >
               {link.label}
             </a>
@@ -439,10 +439,10 @@ function MobileTabletNavbar({
             target="_blank"
             rel="noreferrer"
             onClick={closeMenu}
-            className="flex min-h-[127px] items-center justify-between border-b border-dashed border-white/25 px-[17px] font-grotesk font-bold text-[clamp(44px,3.2vw,39px)] leading-none tracking-[-0.045em] transition-colors duration-400 hover:text-[#f3cf72]"
+            className="flex min-h-31.75 items-center justify-between border-b border-dashed border-white/25 px-4.25 font-grotesk font-bold text-[clamp(44px,3.2vw,39px)] leading-none tracking-[-0.045em] transition-colors duration-400 hover:text-brand-yellow"
           >
             <span>Shop</span>
-            <span className="mr-[15px]">
+            <span className="mr-3.75">
               <ExternalIcon />
             </span>
           </a>

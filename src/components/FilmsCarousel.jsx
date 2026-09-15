@@ -319,7 +319,7 @@ export default function LaikaFullSectionPage() {
     <section
       ref={sliderSectionRef}
       id="homepageslider"
-      className="relative z-20 -mt-[45vh] h-[100vh] w-full bg-transparent"
+      className="relative z-20 mt-[-45vh] h-screen w-full bg-transparent"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -377,16 +377,16 @@ export default function LaikaFullSectionPage() {
             )}
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-0 z-[5] bg-black/10" />
-        <div className="pointer-events-none absolute inset-0 z-[6] bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-5 bg-black/10" />
+        <div className="pointer-events-none absolute inset-0 z-6 bg-linear-to-t from-black/85 via-black/20 to-transparent" />
         <div className="absolute inset-0 z-20">
-          <div className="relative mx-auto h-full w-full max-w-[1440px]">
+          <div className="relative mx-auto h-full w-full max-w-360">
             <div
               key={`category-${displayed}`}
-              className={`absolute left-[20px] top-[9vh] sm:left-[20px] sm:top-[9vh] md:left-[18px] md:top-[25vh] lg:left-[41.8vw] lg:top-[46%] lg:w-[13vw] transition-all duration-[700ms] ease-out ${
+              className={`absolute left-5 top-[9vh] sm:left-5 sm:top-[9vh] md:left-4.5 md:top-[25vh] lg:left-[41.8vw] lg:top-[46%] lg:w-[13vw] transition-all duration-700 ease-out ${
                 contentVisible
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-[15px]"
+                  : "opacity-0 translate-y-3.75"
               }`}
             >
               <p className="whitespace-nowrap text-[14px] uppercase tracking-[-0.02em] text-white sm:text-[18px] md:text-[13px] lg:text-[13px]">
@@ -395,32 +395,32 @@ export default function LaikaFullSectionPage() {
             </div>
             <div
               key={`logo-${displayed}`}
-              className={`relative left-[20px] top-[26vh] h-[15px] w-full sm:left-[20px] sm:top-[17vh] sm:h-[145px] sm:w-full md:left-[18px] md:top-[45vh] md:h-[25px] md:w-[58vw] md:max-w-full md:-translate-y-1/2 lg:left-[1.9vw] lg:top-[50%] lg:h-[16px] lg:max-w-full lg:-translate-y-1/2 transition-all duration-[700ms] ease-out ${
+              className={`relative left-5 top-[26vh] h-3.75 w-full sm:left-5 sm:top-[17vh] sm:h-36.25 sm:w-full md:left-4.5 md:top-[45vh] md:h-6.25 md:w-[58vw] md:max-w-full md:-translate-y-1/2 lg:left-[1.9vw] lg:top-[50%] lg:h-4 lg:max-w-full lg:-translate-y-1/2 transition-all duration-700 ease-out ${
                 contentVisible
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-[15px]"
+                  : "opacity-0 translate-y-3.75"
               }`}
             >
               <img
                 src={currentFilm.logo}
                 alt={currentFilm.title}
-                className="relative left-0 top-1/2 max-h-[220px] w-auto max-w-[220px] -translate-y-1/2 object-contain object-left drop-shadow-[0_5px_20px_rgba(0,0,0,0.25)] md:max-h-[460px] md:max-w-[480px] lg:max-w-[280px] lg:max-h-[155px]"
+                className="relative left-0 top-1/2 max-h-55 w-auto max-w-55 -translate-y-1/2 object-contain object-left drop-shadow-[0_5px_20px_rgba(0,0,0,0.25)] md:max-h-115 md:max-w-120 lg:max-w-70 lg:max-h-38.75"
               />
             </div>
             <div
               key={`description-${displayed}`}
-              className={`relative left-[27vw] right-[20px] top-[36vh] w-[290px] sm:right-[22px] md:left-[26vw] md:top-[60.5vh] lg:left-[58vw] md:w-[600px] lg:top-[46%] lg:w-[30vw] lg:max-w-[850px] transition-all duration-[700ms] ease-out ${
+              className={`relative left-[27vw] right-5 top-[36vh] w-72.5 sm:right-5.5 md:left-[26vw] md:top-[60.5vh] lg:left-[58vw] md:w-150 lg:top-[46%] lg:w-[30vw] lg:max-w-212.5 transition-all duration-700 ease-out ${
                 contentVisible
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-[15px]"
+                  : "opacity-0 translate-y-3.75"
               }`}
             >
-              <div className="min-h-0 md:max-w-[900px] lg:h-[155px] laika-text-reveal laika-text-reveal-delay-2">
+              <div className="min-h-0 md:max-w-225 lg:h-38.75 laika-text-reveal laika-text-reveal-delay-2">
                 <p className="text-left text-[18px] font-normal leading-[1.45] tracking-[-0.04em] text-white drop-shadow-md sm:text-[19px] md:text-[18px] md:leading-[1.38] lg:text-[16px] lg:leading-[1.34]">
                   {currentFilm.description}
                 </p>
               </div>
-              <div className="mt-[26px] md:mt-[28px] lg:mt-[-12px] laika-text-reveal laika-text-reveal-delay-3">
+              <div className="mt-6.5 md:mt-7 lg:-mt-3 laika-text-reveal laika-text-reveal-delay-3">
                 <TrailerButton href={currentFilm.href} />
               </div>
             </div>
@@ -428,20 +428,20 @@ export default function LaikaFullSectionPage() {
         </div>
         <div className="absolute lg:bottom-[6.5vh] md:bottom-[1vh] bottom-[0.5vh] left-0 z-40 w-full">
           <div
-            className="hidden lg:block absolute left-[3.9vw] bottom-0 w-[42vw] max-w-[600px]"
+            className="hidden lg:block absolute left-[3.9vw] bottom-0 w-[42vw] max-w-150"
             data-theme="dark"
           >
             <div className="flex items-end justify-between gap-4">
-              <ul className="flex items-end gap-[13px] overflow-visible py-1">
+              <ul className="flex items-end gap-3.25 overflow-visible py-1">
                 {films.map((filmItem, index) => {
                   const activeThumb = index === active;
                   return (
                     <li
                       key={filmItem.id}
-                      className={`desktop-film-thumb shrink-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)] ${
+                      className={`desktop-film-thumb shrink-0 transition-all duration-1200 ease-[cubic-bezier(0.19,1,0.22,1)] ${
                         thumbsVisible
                           ? "translate-y-0 opacity-100"
-                          : "translate-y-[80px] opacity-0"
+                          : "translate-y-20 opacity-0"
                       }`}
                       style={{
                         transitionDelay: `${index * 120}ms`,
@@ -452,7 +452,7 @@ export default function LaikaFullSectionPage() {
                         disabled={isAnimating}
                         onClick={() => goTo(index)}
                         aria-label={`Go to slide ${index + 1}`}
-                        className={`group relative block cursor-pointer shrink-0 overflow-visible transition-all duration-300 ${activeThumb ? "h-[60px] w-[90px]" : "h-[60px] w-[52px]"}`}
+                        className={`group relative block cursor-pointer shrink-0 overflow-visible transition-all duration-300 ${activeThumb ? "h-15 w-22.5" : "h-15 w-13"}`}
                       >
                         <img
                           src={filmItem.thumb}
@@ -462,10 +462,10 @@ export default function LaikaFullSectionPage() {
                         />
                         {activeThumb && (
                           <>
-                            <span className="pointer-events-none absolute -left-[7px] -top-[7px] h-[14px] w-[14px] rounded-tl-[12px] border-l border-t border-white/90" />
-                            <span className="pointer-events-none absolute -right-[7px] -top-[7px] h-[14px] w-[14px] rounded-tr-[12px] border-r border-t border-white/90" />
-                            <span className="pointer-events-none absolute -bottom-[7px] -left-[7px] h-[14px] w-[14px] rounded-bl-[12px] border-b border-l border-white/90" />
-                            <span className="pointer-events-none absolute -bottom-[7px] -right-[7px] h-[14px] w-[14px] rounded-br-[12px] border-b border-r border-white/90" />
+                            <span className="pointer-events-none absolute -left-1.75 -top-1.75 h-3.5 w-3.5 rounded-tl-xl border-l border-t border-white/90" />
+                            <span className="pointer-events-none absolute -right-1.75 -top-1.75 h-3.5 w-3.5 rounded-tr-xl border-r border-t border-white/90" />
+                            <span className="pointer-events-none absolute -bottom-1.75 -left-1.75 h-3.5 w-3.5 rounded-bl-xl border-b border-l border-white/90" />
+                            <span className="pointer-events-none absolute -bottom-1.75 -right-1.75 h-3.5 w-3.5 rounded-br-xl border-b border-r border-white/90" />
                           </>
                         )}
                       </button>
@@ -518,7 +518,7 @@ export default function LaikaFullSectionPage() {
               />
             </div>
           </div>
-          <div className="absolute inset-x-[18px] bottom-[1.8vh] hidden md:block lg:hidden">
+          <div className="absolute inset-x-4.5 bottom-[1.8vh] hidden md:block lg:hidden">
             <div className="absolute left-0 bottom-[4.5vh] font-mono text-[14px] tracking-[0.04em] text-zinc-300">
               <span className="font-bold text-white">
                 {String(active + 1).padStart(2, "0")}
@@ -559,7 +559,7 @@ export default function LaikaFullSectionPage() {
               />
             </div>
           </div>
-          <div className="absolute inset-x-[20px] bottom-[3vh] md:hidden">
+          <div className="absolute inset-x-5 bottom-[3vh] md:hidden">
             <div className="relative flex w-full items-center justify-between">
               <div className="font-mono text-[11px] tracking-[0.12em] text-zinc-300">
                 <span className="font-bold text-white">
@@ -591,7 +591,7 @@ export default function LaikaFullSectionPage() {
                 </button>
               </div>
             </div>
-            <div className="relative mt-[10px] h-px w-full">
+            <div className="relative mt-2.5 h-px w-full">
               <div className="absolute inset-0 border-t border-dashed border-white/50" />
               <div
                 className="absolute top-0 h-px bg-white transition-all duration-500 ease-out"
